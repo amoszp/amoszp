@@ -1,5 +1,13 @@
 <p align="center">
+  <img src="assets/title-seabox-daily-life.svg" width="100%" alt="day to day">
+</p>
+
+<p align="center">
   <img src="assets/daily-life.svg" width="100%" alt="A home office at dusk seen from behind the chair: four monitors with a desktop notch, an anime, an admin PowerShell session and a service-desk queue; a football match on the TV, a paused game, two posters, music playing and a tortoiseshell cat asleep on the desk.">
+</p>
+
+<p align="center">
+  <img src="assets/title-seabox-my-city.svg" width="100%" alt="a ride through my life">
 </p>
 
 <p align="center">
@@ -7,15 +15,7 @@
 </p>
 
 <p align="center">
-  <b>IT support by day. Building and self-hosting my own apps, with AI as co-pilot.</b>
-</p>
-
-<p align="center">
-  <a href="https://cv.m03z.com"><img src="https://img.shields.io/badge/Portfolio-cv.m03z.com-1a1f2e?style=for-the-badge" alt="Portfolio"></a>
-</p>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,react,nextjs,nodejs,python,docker,linux,azure,powershell,githubactions&theme=dark" alt="TypeScript, React, Next.js, Node.js, Python, Docker, Linux, Azure, PowerShell, GitHub Actions">
+  <img src="assets/title-seabox-thanks.svg" width="100%" alt="see you">
 </p>
 
 <p align="center">

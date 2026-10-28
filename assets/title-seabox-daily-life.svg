@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 150" width="1280" height="150" role="img" aria-label="day to day">
+  <defs>
+    <filter id="glow" x="-10%" y="-60%" width="120%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="wide"/>
+      <feColorMatrix in="wide" type="matrix" values="0 0 0 0 1.000  0 0 0 0 0.604  0 0 0 0 0.180  0 0 0 1.1 0" result="wideC"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.4" result="near"/>
+      <feColorMatrix in="near" type="matrix" values="0 0 0 0 1.000  0 0 0 0 0.604  0 0 0 0 0.180  0 0 0 1.6 0" result="nearC"/>
+      <feMerge><feMergeNode in="wideC"/><feMergeNode in="nearC"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="haze"><stop offset="0" stop-color="#FF9A2E" stop-opacity=".28"/><stop offset="1" stop-color="#FF9A2E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A1520"/><stop offset="1" stop-color="#0E0B12"/></linearGradient>
+    <style>
+      .tube{fill:none;stroke:#FFF1D6;stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;
+             stroke-dasharray:1;stroke-dashoffset:1;opacity:.35;
+             animation:draw .55s ease-out forwards,power .4s steps(3,end) forwards,flick 8s steps(1) infinite}
+      @keyframes draw{to{stroke-dashoffset:0}}
+      @keyframes power{0%{opacity:.35}40%{opacity:1}60%{opacity:.5}100%{opacity:1}}
+      @keyframes flick{0%,94%,100%{opacity:1}95%{opacity:.4}96.5%{opacity:1}97.5%{opacity:.55}}
+      .halo{opacity:0;animation:halo 1.2s ease-out 1.18s forwards}
+      @keyframes halo{to{opacity:1}}
+      @media (prefers-reduced-motion:reduce){.tube{animation:none;stroke-dashoffset:0;opacity:1}.halo{animation:none;opacity:1}}
+    </style>
+  </defs>
+  <rect x="351.7" y="14" width="576.7" height="122" rx="16" fill="url(#plate)" stroke="#2C2433" stroke-width="1.5"/>
+  <circle cx="365.7" cy="28" r="3" fill="#3A3240"/><circle cx="365.7" cy="122" r="3" fill="#3A3240"/><circle cx="914.3" cy="28" r="3" fill="#3A3240"/><circle cx="914.3" cy="122" r="3" fill="#3A3240"/>
+  <ellipse class="halo" cx="640.0" cy="75.0" rx="273.3" ry="46" fill="url(#haze)"/>
+  <g transform="translate(396.7 98.2)" filter="url(#glow)"><path d="M18.06 0.0V-9.459999999999999H35.948L40.592 -13.588V-46.611999999999995L35.948 -50.739999999999995H14.19V0.0H4.3V-60.199999999999996H39.903999999999996L50.482 -50.912V-9.287999999999998L39.903999999999996 0.0Z" pathLength="1" class="tube" style="animation-delay:0.30s,0.85s,3.30s"/><path d="M68.112 -13.588H58.221999999999994V-32.593999999999994L82.47399999999999 -60.199999999999996H106.29599999999999V0.0H96.40599999999999V-17.715999999999998H90.472L76.282 0.0H58.48V-9.459999999999999H71.55199999999999L85.74199999999999 -27.176H96.40599999999999V-50.739999999999995H87.032L68.112 -29.325999999999997Z" pathLength="1" class="tube" style="animation-delay:0.41s,0.96s,4.11s"/><path d="M114.03599999999999 -60.199999999999996H123.92599999999999V-41.279999999999994L130.72 -36.808H146.45799999999997V-27.348H127.53799999999998L114.03599999999999 -36.12ZM114.03599999999999 -9.373999999999999V-22.445999999999998H123.92599999999999V-14.361999999999998L130.892 -9.459999999999999H150.32799999999997V-60.199999999999996H160.218V0.0H127.53799999999998Z" pathLength="1" class="tube" style="animation-delay:0.52s,1.07s,4.92s"/><path d="M199.778 -40.506H190.31799999999998V-60.199999999999996H241.57399999999998V-40.506H232.11399999999998V-50.739999999999995H199.778ZM211.04399999999998 -46.87H220.93399999999997V-9.459999999999999H236.15599999999998V0.0H195.736V-9.459999999999999H211.04399999999998Z" pathLength="1" class="tube" style="animation-delay:0.63s,1.18s,5.73s"/><path d="M249.314 -9.287999999999998V-50.912L259.892 -60.199999999999996H284.918L295.496 -50.912V-9.287999999999998L284.918 0.0H259.892ZM259.204 -13.588 263.84799999999996 -9.459999999999999H280.962L285.606 -13.588V-46.611999999999995L280.962 -50.739999999999995H263.84799999999996L259.204 -46.611999999999995Z" pathLength="1" class="tube" style="animation-delay:0.74s,1.29s,6.54s"/><path d="M340.216 0.0V-9.459999999999999H358.104L362.748 -13.588V-46.611999999999995L358.104 -50.739999999999995H336.346V0.0H326.456V-60.199999999999996H362.06L372.63800000000003 -50.912V-9.287999999999998L362.06 0.0Z" pathLength="1" class="tube" style="animation-delay:0.85s,1.40s,3.85s"/><path d="M390.268 -13.588H380.378V-32.593999999999994L404.63 -60.199999999999996H428.452V0.0H418.562V-17.715999999999998H412.628L398.438 0.0H380.63599999999997V-9.459999999999999H393.70799999999997L407.89799999999997 -27.176H418.562V-50.739999999999995H409.188L390.268 -29.325999999999997Z" pathLength="1" class="tube" style="animation-delay:0.96s,1.51s,4.66s"/><path d="M436.19199999999995 -60.199999999999996H446.08199999999994V-41.279999999999994L452.876 -36.808H468.6139999999999V-27.348H449.69399999999996L436.19199999999995 -36.12ZM436.19199999999995 -9.373999999999999V-22.445999999999998H446.08199999999994V-14.361999999999998L453.04799999999994 -9.459999999999999H472.4839999999999V-60.199999999999996H482.37399999999997V0.0H449.69399999999996Z" pathLength="1" class="tube" style="animation-delay:1.07s,1.62s,5.47s"/></g>
+</svg>

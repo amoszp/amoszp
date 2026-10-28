@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 150" width="1280" height="150" role="img" aria-label="see you">
+  <defs>
+    <filter id="glow" x="-10%" y="-60%" width="120%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="wide"/>
+      <feColorMatrix in="wide" type="matrix" values="0 0 0 0 1.000  0 0 0 0 0.604  0 0 0 0 0.180  0 0 0 1.1 0" result="wideC"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.4" result="near"/>
+      <feColorMatrix in="near" type="matrix" values="0 0 0 0 1.000  0 0 0 0 0.604  0 0 0 0 0.180  0 0 0 1.6 0" result="nearC"/>
+      <feMerge><feMergeNode in="wideC"/><feMergeNode in="nearC"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="haze"><stop offset="0" stop-color="#FF9A2E" stop-opacity=".28"/><stop offset="1" stop-color="#FF9A2E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A1520"/><stop offset="1" stop-color="#0E0B12"/></linearGradient>
+    <style>
+      .tube{fill:none;stroke:#FFF1D6;stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;
+             stroke-dasharray:1;stroke-dashoffset:1;opacity:.35;
+             animation:draw .55s ease-out forwards,power .4s steps(3,end) forwards,flick 8s steps(1) infinite}
+      @keyframes draw{to{stroke-dashoffset:0}}
+      @keyframes power{0%{opacity:.35}40%{opacity:1}60%{opacity:.5}100%{opacity:1}}
+      @keyframes flick{0%,94%,100%{opacity:1}95%{opacity:.4}96.5%{opacity:1}97.5%{opacity:.55}}
+      .halo{opacity:0;animation:halo 1.2s ease-out 0.96s forwards}
+      @keyframes halo{to{opacity:1}}
+      @media (prefers-reduced-motion:reduce){.tube{animation:none;stroke-dashoffset:0;opacity:1}.halo{animation:none;opacity:1}}
+    </style>
+  </defs>
+  <rect x="423.1" y="14" width="433.7" height="122" rx="16" fill="url(#plate)" stroke="#2C2433" stroke-width="1.5"/>
+  <circle cx="437.1" cy="28" r="3" fill="#3A3240"/><circle cx="437.1" cy="122" r="3" fill="#3A3240"/><circle cx="842.9" cy="28" r="3" fill="#3A3240"/><circle cx="842.9" cy="122" r="3" fill="#3A3240"/>
+  <ellipse class="halo" cx="640.0" cy="75.0" rx="201.9" ry="46" fill="url(#haze)"/>
+  <g transform="translate(468.1 98.2)" filter="url(#glow)"><path d="M5.074 -19.177999999999997H14.963999999999999V-9.459999999999999H35.174L40.678 -14.361999999999998V-25.112H14.104L3.4399999999999995 -34.571999999999996V-49.879999999999995L14.104 -60.199999999999996H49.879999999999995V-40.592H39.989999999999995V-50.739999999999995H18.317999999999998L13.329999999999998 -45.924V-38.872L18.145999999999997 -34.571999999999996H50.568V-10.062L39.215999999999994 0.0H5.074Z" pathLength="1" class="tube" style="animation-delay:0.30s,0.85s,3.30s"/><path d="M102.76999999999998 -60.199999999999996V-50.739999999999995H68.28399999999999V-37.581999999999994H58.39399999999999V-60.199999999999996ZM90.472 -42.312 98.55599999999998 -37.324 90.472 -24.509999999999998H68.198V-14.447999999999999L75.594 -9.459999999999999H103.37199999999999V0.0H72.24L58.30799999999999 -9.459999999999999V-33.97H85.312Z" pathLength="1" class="tube" style="animation-delay:0.41s,0.96s,4.11s"/><path d="M153.85399999999998 -60.199999999999996V-50.739999999999995H119.36799999999998V-37.581999999999994H109.47799999999998V-60.199999999999996ZM141.55599999999998 -42.312 149.64 -37.324 141.55599999999998 -24.509999999999998H119.28199999999998V-14.447999999999999L126.67799999999998 -9.459999999999999H154.456V0.0H123.32399999999998L109.39199999999998 -9.459999999999999V-33.97H136.396Z" pathLength="1" class="tube" style="animation-delay:0.52s,1.07s,4.92s"/><path d="M181.976 -60.199999999999996H191.86599999999999V-41.279999999999994L198.66 -36.808H214.398V-27.348H195.478L181.976 -36.12ZM181.976 -9.373999999999999V-22.445999999999998H191.86599999999999V-14.361999999999998L198.832 -9.459999999999999H218.268V-60.199999999999996H228.158V0.0H195.478Z" pathLength="1" class="tube" style="animation-delay:0.63s,1.18s,5.73s"/><path d="M236.758 -9.287999999999998V-50.912L247.33599999999998 -60.199999999999996H272.36199999999997L282.94 -50.912V-9.287999999999998L272.36199999999997 0.0H247.33599999999998ZM246.648 -13.588 251.292 -9.459999999999999H268.406L273.05 -13.588V-46.611999999999995L268.406 -50.739999999999995H251.292L246.648 -46.611999999999995Z" pathLength="1" class="tube" style="animation-delay:0.74s,1.29s,6.54s"/><path d="M320.694 -54.007999999999996 314.846 -46.611999999999995 309.6 -50.82599999999999H301.43V-16.253999999999998L309.084 -9.546H321.898L329.552 -16.253999999999998V-60.199999999999996H339.442V-11.953999999999999L325.94 -0.086H305.04200000000003L291.54 -11.953999999999999V-60.285999999999994H312.868Z" pathLength="1" class="tube" style="animation-delay:0.85s,1.40s,3.85s"/></g>
+</svg>

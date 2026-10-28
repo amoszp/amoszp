@@ -32,7 +32,7 @@ for r, y in enumerate(range(0, DESK, 26)):
     off = 0 if r % 2 else 38
     for x in range(-off, W, 76):
         stones.append(f'<rect x="{x + 2}" y="{y + 2}" width="72" height="22" rx="3"/>')
-wall = (f'<rect width="{W}" height="{DESK}" fill="url(#wallG)"/>'
+wall = (f'<rect width="{W}" height="{FLOOR + 2}" fill="url(#wallG)"/>'
         f'<g fill="#FFFFFF" opacity=".025">{"".join(stones)}</g>'
         f'<rect width="{W}" height="{DESK}" fill="url(#vignette)"/>')
 # wooden ceiling beams (Canarian "tea" wood)
@@ -498,8 +498,9 @@ shelves = f"""
 """
 TVX, TVY, TVW, TVH = 968, 60, 220, 126          # a bit bigger than the game screen, centred over it (x = 1078)
 sxp, syp = TVW / 170, TVH / 70
-players = "".join(f'<circle cx="{TVX + px * sxp:.1f}" cy="{TVY + 6 + py * syp * .92:.1f}" r="3" fill="{c}" class="pl{i % 4}"/>' for i, (px, py, c) in enumerate(
-    [(30, 30, "#FFF"), (60, 50, "#FFF"), (90, 26, "#FFF"), (120, 44, "#FFF"), (44, 56, "#C4B5FD"), (80, 40, "#C4B5FD"), (110, 22, "#C4B5FD"), (146, 50, "#C4B5FD")]))
+players = "".join(f'<circle cx="{TVX + px * sxp:.1f}" cy="{TVY + 6 + py * syp * .92:.1f}" r="2.6" fill="{c}" class="pl{i % 4}"/>' for i, (px, py, c) in enumerate(
+    [(14, 38, "#FFF"), (36, 22, "#FFF"), (38, 52, "#FFF"), (62, 30, "#FFF"), (66, 58, "#FFF"), (96, 18, "#FFF"), (104, 44, "#FFF"), (124, 30, "#FFF"),
+     (156, 38, "#C4B5FD"), (136, 20, "#C4B5FD"), (134, 54, "#C4B5FD"), (114, 58, "#C4B5FD"), (84, 34, "#C4B5FD"), (76, 12, "#C4B5FD"), (50, 40, "#C4B5FD"), (112, 8, "#C4B5FD")]))
 for k in range(4):
     dx, dy = [(9, -5), (-7, 6), (8, 7), (-9, -6)][k]
     kf(f"pl{k}", [(0, "transform:none"), (6, f"transform:translate({dx}px,{dy}px)"), (12, "transform:none"), (18, f"transform:translate({-dx}px,{dy}px)"), (24, "transform:none")], ease="ease-in-out")
@@ -512,10 +513,10 @@ tv = f'''<g>
     <rect x="{TVX + 8}" y="{TVY + 16}" width="{TVW - 16}" height="{TVH - 22}"/><path d="M{TVX + TVW / 2} {TVY + 16} V{TVY + TVH - 6}"/>
     <circle cx="{TVX + TVW / 2}" cy="{TVY + TVH / 2 + 5}" r="15"/>
     <rect x="{TVX + 8}" y="{TVY + TVH / 2 - 14}" width="20" height="38"/><rect x="{TVX + TVW - 28}" y="{TVY + TVH / 2 - 14}" width="20" height="38"/></g>
-  {players}<circle cx="{TVX + TVW * .52:.1f}" cy="{TVY + TVH * .56:.1f}" r="2.6" fill="#FFF7D6" class="fball"/>
+  {players}<circle cx="{TVX + TVW * .52:.1f}" cy="{TVY + TVH * .56:.1f}" r="1.6" fill="#FFF7D6" stroke="#1A1416" stroke-width=".5" class="fball"/>
   <rect x="{TVX + 5}" y="{TVY + 3}" width="122" height="14" rx="2" fill="#0B0A0E" opacity=".92"/>
-  <text x="{TVX + 10}" y="{TVY + 13.5}" class="mono" font-size="9" font-weight="700" fill="#FFF">RMA <tspan class="sc1">2</tspan><tspan class="sc2" dx="-5.4">3</tspan>-1 <tspan fill="#C4B5FD">ATM</tspan></text>
-  <text x="{TVX + 100}" y="{TVY + 13.5}" class="mono" font-size="8.5" fill="#9BE39B">88'</text>
+  <text x="{TVX + 10}" y="{TVY + 13.5}" class="mono" font-size="9" font-weight="700" fill="#FFF">RMA <tspan class="sc1">0</tspan><tspan class="sc2" dx="-5.4">1</tspan>-1 <tspan fill="#C4B5FD">ATM</tspan></text>
+  <text x="{TVX + 100}" y="{TVY + 13.5}" class="mono" font-size="8.5" fill="#9BE39B"><tspan class="sc1">93'</tspan><tspan class="sc2" dx="-14.4">94'</tspan></text>
   <g class="goal"><rect x="{TVX + TVW / 2 - 54}" y="{TVY + TVH / 2 - 16}" width="108" height="36" rx="5" fill="#FFD23F"/>
     <text x="{TVX + TVW / 2}" y="{TVY + TVH / 2 + 10}" text-anchor="middle" class="disp" font-size="24" font-weight="900" fill="#14101A">GOAL!</text></g>
 </g>'''
